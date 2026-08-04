@@ -1,0 +1,21 @@
+# Compilados de C
+*.o
+*.out
+*.exe
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Ignorar binários sem extensão em Linux/WSL (opcional, se você compilar em subpastas bin/)
+bin/
+build/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
