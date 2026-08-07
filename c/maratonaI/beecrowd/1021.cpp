@@ -65,7 +65,7 @@ int main(){
 		moeda005++;
 	}
 
-	while(valor > 0.0){
+	while(valor >= 0.01){
 		valor = valor - 0.01;
 		moeda001++;
 	}
