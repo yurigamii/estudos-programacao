@@ -7,41 +7,23 @@ int main(){
 
 	scanf("%d %d", &N, &M);
 
-	while ((N != 0) && (M != 0)) {
-		int falsos = 0;
-		if (N < M) {
-			falsos = M - N;
+	while ((N != 0) && (M !=0)) {
+		int contador = 0;	
+		int bilhetes[M];
+		for(int i = 0; i < M; i++){
+			scanf("%d", &bilhetes[i]);
 		}
-		else{
-			//Inicializar o vetor com bilhetes esperados		
-			int vetIdeal[N];
-			for(int i = 0; i < N; i++){
-				vetIdeal[i] = i + 1;
-			}
-			//Inicializar o vetor com todos os bilhetes recebidos
-			int vetReal[M];
-			for(int i = 0; i < M; i++){
-				scanf("%d", &vetReal[i]);
-			}
-
-			for(int i = 0; i < M; i++){
-				int iguais = 0;
-				for(int j = 0; j < N; j++){
-					if (vetReal[i] == vetIdeal[j]) {
-						iguais++;
-					}
+		for(int i = 0; i < M; i++){
+			for(int j = 0; j < M; j++){
+				if(bilhetes[i] == bilhetes[j]){
+					contador++;
 				}
-				if (iguais != 1) {
-					falsos++;
-				
-				}
-
 			}
 		}
 
-		printf("%d\n", falsos);
-
+		printf("%d", contador);	
 		scanf("%d %d", &N, &M);
+
 	}
 
 	return 0;
