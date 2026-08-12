@@ -8,22 +8,28 @@ int main(){
 	scanf("%d %d", &N, &M);
 
 	while ((N != 0) && (M !=0)) {
-		int contador = 0;	
-		int bilhetes[M];
-		for(int i = 0; i < M; i++){
-			scanf("%d", &bilhetes[i]);
+		
+		int bilhetes[N];
+
+		for(int i = 0; i < N; i++){
+			bilhetes[i] = 0;
 		}
+		int leitura = 0;
+		int contador = 0;
+
 		for(int i = 0; i < M; i++){
-			for(int j = 0; j < M; j++){
-				if(bilhetes[i] == bilhetes[j]){
-					contador++;
-				}
+			scanf("%d", &leitura);
+			bilhetes[leitura - 1] += 1;
+		}
+
+		for(int i = 0; i < N; i++){
+			if (bilhetes[i] > 1) {
+				contador++;
 			}
 		}
-
-		printf("%d", contador);	
+		
+		printf("%d\n", contador);
 		scanf("%d %d", &N, &M);
-
 	}
 
 	return 0;
