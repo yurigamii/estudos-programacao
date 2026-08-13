@@ -18,10 +18,11 @@ int main(){
 				tempo_t = tempo_t + tempo;
 				certos++;
 			}
-			else if(decisao[0] == 'i'){
+			else {
 				tempo_t += 20;
 			}
 		}
+
 		printf("%d %d\n", certos, tempo_t);
 		scanf("%d", &N);
 	}	
